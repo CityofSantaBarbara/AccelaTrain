@@ -1,7 +1,7 @@
 //WTUA;SPECIALEVENT!SPECIAL EVENT!NA!APPLICATION
 if ((AInfo["Stage"] == "CHECKED") 
     && (wfTask == "Application Submittal" && wfStatus == "Department Review")){
-        activateTask("Comm Dev Bldg Safety") 
+        activateTask("Comm Dev Bldg Safety");
         logDebug("County Assessor permit issuance email");
 		//Get Report and Report Parameters
               
