@@ -193,5 +193,34 @@ if (AInfo["Interested in hosting a Zero Waste event"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Interested in hosting a Zero Waste event", null)) {
     addStdCondition("Special Event Requirements", "Interested in hosting a Zero Waste event");
 }
+if (AInfo["The event is a market trade show exhibit or has a similar vendor set up"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "The event is a market trade show exhibit or has a similar vendor set up", null)) {
+    addStdCondition("Special Event Requirements", "The event is a market trade show exhibit or has a similar vendor set up");
+}
+if (AInfo["Installing temporary electrical wiring for event"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Installing temporary electrical wiring for event", null)) {
+    addStdCondition("Special Event Requirements", "Installing temporary electrical wiring for event");
+}
+if (AInfo["Requesting uniformed City police officers"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Requesting uniformed City police officers", null)) {
+    addStdCondition("Special Event Requirements", "Requesting uniformed City police officers");
+}
+if (AInfo["Walk/Run/Cycling route or ocean activities extend outside of City limits"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Walk/Run/Cycling route or ocean activities extend outside of City limits", null)) {
+    addStdCondition("Special Event Requirements", "Walk/Run/Cycling route or ocean activities extend outside of City limits");
+}
+if (AInfo["Organizations will be onsite collecting donations"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Organizations will be onsite collecting donations", null)) {
+    addStdCondition("Special Event Requirements", "Organizations will be onsite collecting donations");
+}
+if (AInfo["Parking for a food truck or trailer"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Parking for a food truck or trailer", null)) {
+    addStdCondition("Special Event Requirements", "Parking for a food truck or trailer");
+}
+if (AInfo["Parking for vehicles"] == "CHECKED"
+    && !appHasCondition("Special Event Requirements", null, "Parking for vehicles", null)) {
+    addStdCondition("Special Event Requirements", "Parking for vehicles");
+}
+
 //END COA - Add depending Custom Field Question
 
