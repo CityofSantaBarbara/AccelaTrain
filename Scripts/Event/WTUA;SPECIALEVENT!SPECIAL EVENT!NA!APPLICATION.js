@@ -1,7 +1,21 @@
 //WTUA;SPECIALEVENT!SPECIAL EVENT!NA!APPLICATION
+if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
+    deactivateTask("PBWTransportation");
+    deactivateTask("Comm Dev Bldg Safety");
+    deactivateTask("SBPD");
+    deactivateTask("Comm Dev Planning");
+    deactivateTask("SBFD");
+    deactivateTask("Risk Mgmt");
+    deactivateTask("Creeks");
+    deactivateTask("Environmental Services");
+    deactivateTask("WF Parking");
+    deactivateTask("City Admin Office");
+    deactivateTask("Parks and Rec");
+    deactivateTask("Public Works Streets");
+}
 if ((AInfo["Stage"] == "CHECKED") 
     && (wfTask == "Application Submittal" && wfStatus == "Department Review")){
-        activateTask("Comm Dev Bldg Safety","Pending");
+        activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
 	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
