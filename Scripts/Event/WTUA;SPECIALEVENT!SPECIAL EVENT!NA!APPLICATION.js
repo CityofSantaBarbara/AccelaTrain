@@ -18,7 +18,8 @@ if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
 //Reference #1
 if ((AInfo["Stage"] == "CHECKED") 
     && (wfTask == "Application Submittal" && wfStatus == "Department Review")
-    && (wfTask == "Comm Dev Bldg Safety" && wfStatus == "Pending")){
+    //&& (wfTask == "Comm Dev Bldg Safety" && wfStatus == "Pending")
+    ){
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
@@ -41,7 +42,8 @@ if ((AInfo["Stage"] == "CHECKED")
 if ((AInfo["Tent dimensions are 400 square feet or more"] == "CHECKED") 
     || (AInfo["Canopy dimensions are 700 square feet or more"] == "CHECKED") 
     && (wfTask == "Application Submittal" && wfStatus == "Department Review")
-    && (wfTask == "SBFD" && wfStatus == "Pending")){
+   // && (wfTask == "SBFD" && wfStatus == "Pending")
+    ){
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
