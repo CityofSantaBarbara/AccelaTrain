@@ -8,14 +8,13 @@ removeAllFees(capId);
 
 if  ((AInfo["Remove and Replace only the HVAC furnace and fan"] == "CHECKED")
     || (AInfo["Remove and Replace the HVAC furnace fan and all duct work"] == "CHECKED")
-    || (AInfo["Remove and Replace the HVAC furnace fan duct work and exterior condensing unit"] == "CHECKED")
-    && (AInfo["Remove and Replace Wall Heater"] == "CHECKED")){ 
-     updateFee("BLD_ITM_0490", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y");
+    || (AInfo["Remove and Replace the HVAC furnace fan duct work and exterior condensing unit"] == "CHECKED")){ 
+     updateFee("BLD_ITM_0490", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y"); //$503
 } else if ((AInfo["Remove and Replace only the HVAC furnace and fan"] == "UNCHECKED")
     || (AInfo["Remove and Replace the HVAC furnace fan and all duct work"] == "UNCHECKED")
     || (AInfo["Remove and Replace the HVAC furnace fan duct work and exterior condensing unit"] == "UNCHECKED")
     && (AInfo["Remove and Replace Wall Heater"] == "CHECKED")){
-     updateFee("BLD_ITM_0510", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y");
+     updateFee("BLD_ITM_0510", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y"); //$252
 }
 
 
