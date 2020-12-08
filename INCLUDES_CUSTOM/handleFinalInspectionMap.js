@@ -24,6 +24,12 @@ function handleFinalInspectionMap(itemCap) {
                 logDebug("handleFinalInspectionMap 2: found matching result of " + inspResult);
                 if (m.task && m.status) {
                     resultWorkflowTask(m.task, m.status, "", "");
+                    
+                    if (inspMapString.indexOf("Building/")>0){
+						switch(m.task) {
+							case "Inspection": runWTUAForWFTaskWFStatus(m.task,'BLD_GENERAL_1',10,m.status,capId);
+						}
+					}
                 }
                 if (m.reportName) {
                      logDebug("report sample " + m.reportName);
