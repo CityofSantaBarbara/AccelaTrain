@@ -16,15 +16,6 @@ if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
     deactivateTask("Public Works Streets");
 }
 */
-//*******START - $0 Balance*********
-if(true){
-	if(wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue > 0){
-		cancel = true;
-		showMessage = true;
-		comment("Cannot issue permit because there is balance due of $" + balanceDue);
-    }
-}
-//*******END - $0 Balance*********
 
 //*******START - Send Issued Permit*********
 if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
