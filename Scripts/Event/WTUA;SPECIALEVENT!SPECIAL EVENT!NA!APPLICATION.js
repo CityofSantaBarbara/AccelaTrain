@@ -17,10 +17,12 @@ if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
 }
 */
 //*******START - $0 Balance*********
-if(wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue > 0){
-    cancel = true;
-    showMessage = true;
-    comment("Cannot issue permit because there is balance due of $" + balanceDue);
+if(true){
+	if(wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue > 0){
+		cancel = true;
+		showMessage = true;
+		comment("Cannot issue permit because there is balance due of $" + balanceDue);
+	}
 }
 //*******END - $0 Balance*********
 
