@@ -17,7 +17,7 @@ if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
 }
 */
 //*******START - $0 Balance*********
-if (wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue <= 0)
+if (wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue >= 0)
 	{
 	   updateTask("Permit Issuance","Issued", "Updated by script", "Updated by script");
 }
