@@ -10,16 +10,7 @@ if(true){
 		){
 		cancel = true;
 		showMessage = true;
-		comment("Can not " + wfStatus + " with a balance due of " + balanceDue + ".");
+		comment("Cannot final the permit because there is balance due of $" + balanceDue);
     }
 }
 //*******END - $0 Balance*********
-/*
-logDebug("balanceDue " + balanceDue);
-    if(parseInt(balanceDue) > 0)
-    {
-        cancel = true;
-        showMessage = true;
-        comment("Can not " + wfStatus + " with a balance due of " + balanceDue + ".");
-	}
-*/
