@@ -3,12 +3,23 @@
 
 
 //*******START - $0 Balance*********
+logDebug("balanceDue " + balanceDue);
 if(true){
-	if(wfTask == "Permit Issuance" && wfStatus == "Issued" && balanceDue > 0){
+	if((wfTask == "Permit Issuance" && wfStatus == "Issued") 
+		&& (parseInt(balanceDue) > 0)
+		){
 		cancel = true;
 		showMessage = true;
-		comment("Cannot issue permit because there is balance due of $" + balanceDue);
+		comment("Can not " + wfStatus + " with a balance due of " + balanceDue + ".");
     }
 }
 //*******END - $0 Balance*********
-
+/*
+logDebug("balanceDue " + balanceDue);
+    if(parseInt(balanceDue) > 0)
+    {
+        cancel = true;
+        showMessage = true;
+        comment("Can not " + wfStatus + " with a balance due of " + balanceDue + ".");
+	}
+*/
