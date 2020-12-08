@@ -22,7 +22,7 @@ if(true){
 		cancel = true;
 		showMessage = true;
 		comment("Cannot issue permit because there is balance due of $" + balanceDue);
-	}
+    }
 }
 //*******END - $0 Balance*********
 

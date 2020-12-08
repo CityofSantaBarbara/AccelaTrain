@@ -25,7 +25,7 @@ if (capContactResult.getSuccess()) {
         //generate report
         var user = "ADMIN"; // Setting the User Name
         var reportNames = new Array();
-        reportNames.push(["Test Report"]);
+        reportNames.push(["Special Event Sample"]);
         
         for (var i in reportNames) {
           logDebug("running " + reportNames[i][0]);
