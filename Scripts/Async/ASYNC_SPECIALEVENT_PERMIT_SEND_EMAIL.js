@@ -25,7 +25,8 @@ if (capContactResult.getSuccess()) {
         //generate report
         var user = "ADMIN"; // Setting the User Name
         var reportNames = new Array();
-        reportNames.push(["Special Event Sample"]);
+        //reportNames.push(["Special Event Sample"]);
+        reportNames.push(["Test Report"]);
         
         for (var i in reportNames) {
           logDebug("running " + reportNames[i][0]);
@@ -33,7 +34,7 @@ if (capContactResult.getSuccess()) {
             reportNames[i][0]
           );
           report = report.getOutput();
-          report.setModule("SpecialEvent");
+          //report.setModule("SpecialEvent");
           report.setCapId(capId);
           var parameters = aa.util.newHashMap();
           parameters.put("AGENCY_ALT_ID", capIDString);
