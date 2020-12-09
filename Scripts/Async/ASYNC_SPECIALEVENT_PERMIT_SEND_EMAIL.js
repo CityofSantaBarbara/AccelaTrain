@@ -34,7 +34,7 @@ if (capContactResult.getSuccess()) {
             reportNames[i][0]
           );
           report = report.getOutput();
-          //report.setModule("SpecialEvent");
+          report.setModule("SpecialEvent");
           report.setCapId(capId);
           var parameters = aa.util.newHashMap();
           parameters.put("AGENCY_ALT_ID", capIDString);
