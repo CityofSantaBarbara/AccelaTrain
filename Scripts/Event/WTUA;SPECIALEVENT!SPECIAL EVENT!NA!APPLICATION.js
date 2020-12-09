@@ -19,7 +19,7 @@ if (wfTask == "Application Submittal" && wfStatus == "Department Review"){
 
 //*******START - Send Issued Permit*********
 if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
-    runAsyncEvent("ASYNC_ONDEMAND_SPECIALEVENT_PERMIT_SEND_EMAIL",capIDString,currentUserID);
+    runAsyncEvent("ASYNC_SPECIALEVENT_PERMIT_SEND_EMAIL",capIDString,currentUserID);
   }
 //*******END - Send Issued Permit*********
 
