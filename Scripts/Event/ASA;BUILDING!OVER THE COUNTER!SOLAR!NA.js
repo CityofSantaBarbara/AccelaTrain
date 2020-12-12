@@ -10,7 +10,7 @@ if (AInfo['Solar Photovoltaic'] == 'CHECKED') {
 if (AInfo['Solar Photovoltaic and Battery Energy'] == 'CHECKED') {
 	updateFee("BLD_ITM_0230", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y");
 }
-if (AInfo['Encroach'] == 'CHECKED') {
+if (AInfo['Encroch'] == 'CHECKED') {
 	updateFee("PBW_BLD_TRANS_REV", "PDW", "FINAL", 1, "Y");
 }
 
