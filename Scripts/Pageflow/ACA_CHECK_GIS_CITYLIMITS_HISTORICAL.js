@@ -94,10 +94,10 @@ try {
     //    cancel = true;
    //     comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
  if ((cityLimits == 'City')
-    && (Landmark =='-')
-    && (Structure =='-')
-    && (Potential =='-')
-    && (Historic =='-')
+    && ((Landmark == '' || Landmark == null || Landmark =='-') 
+    && (Structure == '' || Structure == null || Structure =='-') 
+    && (Potential == '' || Potential == null || Potential =='-') 
+    && (Historic == '' || Historic == null || Historic =='-'))
     )
       {
         showMessage = false;
@@ -107,8 +107,8 @@ try {
         //cancel=false;
         //comment("");
         showMessage = true;
-    //    cancel = true;
-   //     comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
+        cancel = true;
+        comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
    
     } 
 } catch (err) {
