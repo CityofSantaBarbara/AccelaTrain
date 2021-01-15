@@ -88,12 +88,12 @@ try {
     var Potential = getGISInfo2ASB("SANTABARBARA", "Assessors Parcels", "PotHistoricDist");
     var Historic = getGISInfo2ASB("SANTABARBARA", "Assessors Parcels", "HistoricDistricts");
 
-    if ((!cityLimits) && (!Landmark) && (!Structure) && (!Potential) && (!Historic)
-     ){
-        showMessage = true;
-        cancel = true;
-        comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
-    } if ((cityLimits == 'City')
+    //if ((!cityLimits) && (!Landmark) && (!Structure) && (!Potential) && (!Historic)
+    // ){
+    //    showMessage = true;
+    //    cancel = true;
+   //     comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
+ if ((cityLimits == 'City')
     && (Landmark =='-')
     && (Structure =='-')
     && (Potential =='-')
@@ -104,8 +104,12 @@ try {
         cancel = fasle;
         comment('');
      }else { 
-        cancel=false;
-        comment("");
+        //cancel=false;
+        //comment("");
+        showMessage = true;
+    //    cancel = true;
+   //     comment("The parcel you have selected is out of City Limits or a Historic Sturcture or Landmark. Please contact the City for more information");
+   
     } 
 } catch (err) {
     //  cancel = true;
