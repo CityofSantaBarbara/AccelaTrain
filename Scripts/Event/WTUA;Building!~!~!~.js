@@ -224,7 +224,7 @@ if (wfTask == "Inspection" && wfStatus == "Permit Expired") {
      addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
      addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
 
-     var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
+     var emailTemplate = "BLD_PERMIT_EXPIRED_APP_ASSESSOR";
      var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
      var fileNames = [];
     
