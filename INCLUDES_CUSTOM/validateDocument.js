@@ -28,7 +28,7 @@
 function validateDocument(){
     //cancel = true;
     //comment(capStatus )
-        if(capStatus && (capStatus == "Permit Cancelled" || docCapStatus == "Closed" || docCapStatus == "Application Withdrawn" || docCapStatus == "Permit Expired" || docCapStatus == "Completed" || docCapStatus == "Complete" || docCapStatus == "Void")){
+        if(capStatus && (capStatus == "Revisions Required")){
             cancel = true;
             comment(" You can not edit the document because current records status is : " + capStatus );
         }
