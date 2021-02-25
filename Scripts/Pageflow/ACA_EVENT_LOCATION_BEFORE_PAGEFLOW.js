@@ -146,18 +146,11 @@ try {
 	cancel = false;
 	showMessage = false;
 
-    var variable2 = expression.getValue(
-      "ASI::EVENT LOCATION::Use or Closure of City Sidewalk or Bike Path"
-    );
-    var variable3 = expression.getValue("ASI::EVENT LOCATION::Running event");
-    var variable5 = expression.getValue("ASI::EVENT LOCATION::BlockParty");
-    var variable6 = expression.getValue("ASI::EVENT LOCATION::Others");
-
     if (
-      variable2.value == "CHECKED" &&
-      (variable3.value == null || variable3.value == "UNCHECKED") &&
-      (variable5.value == null || variable5.value == "UNCHECKED") &&
-      (variable6.value == null || variable6.value == "UNCHECKED")
+      AInfo["Use or Closure of City Sidewalk or Bike Path"] == "CHECKED" &&
+      (AInfo["Running event"] == null || AInfo["Running event"] == "UNCHECKED") &&
+      (AInfo["BlockParty"] == null || AInfo["BlockParty"] == "UNCHECKED") &&
+      (AInfo["Others"] == null || AInfo["Others"] == "UNCHECKED")
     ) {
       cancel = true;
       showMessage = true;
@@ -167,22 +160,13 @@ try {
       showMessage = false;
       comment("");
     }
-    var variable7 = expression.getValue(
-      "ASI::EVENT LOCATION::Use or Closure of City Street"
-    );
-    var variable8 = expression.getValue(
-      "ASI::EVENT LOCATION::Running walking event"
-    );
-    var variable9 = expression.getValue("ASI::EVENT LOCATION::Cycling Event");
-    var variable10 = expression.getValue("ASI::EVENT LOCATION::Block Party");
-    var variable11 = expression.getValue("ASI::EVENT LOCATION::Other");
 
     if (
-      variable7.value == "CHECKED" &&
-      (variable8.value == null || variable8.value == "UNCHECKED") &&
-      (variable9.value == null || variable9.value == "UNCHECKED") &&
-      (variable10.value == null || variable10.value == "UNCHECKED") &&
-      (variable11.value == null || variable11.value == "UNCHECKED")
+        AInfo["Use or Closure of City Street"] == "CHECKED" &&
+      (AInfo["Running walking event"] == null || AInfo["Running walking event"] == "UNCHECKED") &&
+      (AInfo["Cycling Event"] == null || AInfo["Cycling Event"] == "UNCHECKED") &&
+      (AInfo["Block Party"] == null || AInfo["Block Party"] == "UNCHECKED") &&
+      (AInfo["Other"] == null || AInfo["Other"] == "UNCHECKED")
     ) {
       cancel = true;
       showMessage = true;
