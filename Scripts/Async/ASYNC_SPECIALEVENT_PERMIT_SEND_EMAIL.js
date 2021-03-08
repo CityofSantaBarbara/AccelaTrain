@@ -7,7 +7,7 @@ if (capContactResult.getSuccess()) {
       .getCapContactModel()
       .getPeople()
       .getContactType();
-    if (tmpContactType == "Event Applicant") {
+    if (tmpContactType == "Event Organizer") {
       var paEmail = Contacts[yy].getCapContactModel().getPeople().getEmail();
       if (paEmail != null && paEmail != undefined) {
         var reportFiles = new Array();
