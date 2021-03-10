@@ -29,7 +29,7 @@ if (
         || AInfo["Building a structure"] == "CHECKED"
         || AInfo["Installing temporary electrical wiring for event"] == "CHECKED"
         || AInfo["Large towed generator with a grounding rod"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
     //&& (wfTask == "Comm Dev Bldg Safety" && wfStatus == "Pending")
     ){
         //activateTask("Comm Dev Bldg Safety");
@@ -61,7 +61,7 @@ if (
         || AInfo["Equipment with an open flame"] == "CHECKED"
         || AInfo["Carnival Rides or Games"] == "CHECKED"
         || AInfo["Parade Floats"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
    // && (wfTask == "SBFD" && wfStatus == "Pending")
     ){
         //activateTask("Comm Dev Bldg Safety");
@@ -97,7 +97,7 @@ if (
         || AInfo["Road Closure Equipment"] == "CHECKED"
         || AInfo["Event set-up or equipment will be left at the event site overnight"] == "CHECKED"
         || AInfo["Hiring professional security guards to monitor the event"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
    // && (wfTask == "SBFD" && wfStatus == "Pending")
     ){
         //activateTask("Comm Dev Bldg Safety");
@@ -130,7 +130,7 @@ if (
         ||AInfo["Requesting to place portable toilets or trash and recycling receptacles on a City street"] == "CHECKED"
         ||AInfo["Requesting access to a City water hydrant"] == "CHECKED"
         ||AInfo["Road Closure Equipment"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
    // && (wfTask == "SBFD" && wfStatus == "Pending")
     ){
         //activateTask("Comm Dev Bldg Safety");
@@ -160,7 +160,7 @@ if (
         ||AInfo["Requesting use of City Volleyball Courts"] == "CHECKED"
         || AInfo["Event set-up or equipment will be left at the event site overnight"] == "CHECKED"
         || AInfo["Hiring professional security guards to monitor the event"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
     ){
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
@@ -187,7 +187,7 @@ if (
 if (
     (AInfo["Vendors selling food and beverages in a park or beach"] == "CHECKED"
         ||AInfo["Vendors selling food and beverages in the Public Right of Way"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
     ){
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
@@ -215,7 +215,7 @@ if (
     (AInfo["Use of City Waterfront Parking Lot"] == "CHECKED"
         ||AInfo["Parking for a food truck or trailer"] == "CHECKED"
         ||AInfo["Requesting to place portable toilets or dumpsters in a Waterfront Parking Lot"] == "CHECKED")
-    && (wfTask == "Application Submittal" && wfStatus == "Department Review")
+    //&& (wfTask == "Application Submittal" && wfStatus == "Department Review")
     ){
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
