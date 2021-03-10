@@ -35,7 +35,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "CDBuildingCode@SantaBarbaraCa.gov";
                 var ccEmail = ""; //blank for now
@@ -48,7 +48,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 //*******END - Email to Building & Safety*********
 
@@ -67,7 +67,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "FirePrevention2@SantaBarbaraCA.gov";
                 var ccEmail = ""; //blank for now
@@ -80,7 +80,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 //*******END - Email to Fire Prevention 2*********
 
@@ -103,7 +103,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+	        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "OHoodes@sbpd.com";
                 var ccEmail = ""; //blank for now
@@ -116,7 +116,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate +  toEmail);
 }
 
 //*******END - Email to SBPD*********
@@ -136,7 +136,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "PWCounter@SantaBarbaraCA.gov";
                 var ccEmail = ""; //blank for now
@@ -149,7 +149,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 
 //*******END - Email to Public Works Streets*********
@@ -165,7 +165,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "specialevents@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now
@@ -178,7 +178,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 
 //*******END - Email to Parks & Rec*********
@@ -192,7 +192,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "businesslicense@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now
@@ -205,7 +205,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 
 //*******END - Email to City of Santa Barbara Finance Dept*********
@@ -220,7 +220,7 @@ if (
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
                 var toEmail = "jason@grayquarter.com";
                 //var toEmail = "cbarrios@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now
@@ -233,7 +233,7 @@ if (
                 var fileNames = [];
                
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-                logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+                logDebug( ": Sent Email template " + emailTemplate + toEmail);
 }
 
 //*******END - Email to Water Front Parking*********

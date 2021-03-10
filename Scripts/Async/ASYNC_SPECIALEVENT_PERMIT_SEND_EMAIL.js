@@ -26,7 +26,7 @@ if (capContactResult.getSuccess()) {
         var user = "ADMIN"; // Setting the User Name
         var reportNames = new Array();
         //reportNames.push(["Special Event Sample"]);
-        reportNames.push(["Test Report"]);
+        reportNames.push(["Special Event Permit"]);
         
         for (var i in reportNames) {
           logDebug("running " + reportNames[i][0]);
