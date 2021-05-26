@@ -39,7 +39,7 @@ updateFee("BLD_ITM_2040", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y");
 var totPoints = "";
 if (AInfo["Desired Scoping and Conditioning Questions 1"] == "CHECKED") {
   if (totPoints != "") totPoints += "& ";
-  totPoints = totPoints + "The current location of this water service is the same location that was previously approved by the Ci ";
+  totPoints = totPoints + "The current location of this water service is the same location that was previously approved by the City of Santa Barbara ";
 }
 if (AInfo["Desired Scoping and Conditioning Questions 2"] == "CHECKED") {
   if (totPoints != "") totPoints += "& ";
