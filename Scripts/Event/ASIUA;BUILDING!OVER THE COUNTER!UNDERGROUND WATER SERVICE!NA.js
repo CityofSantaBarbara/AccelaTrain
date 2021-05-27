@@ -3,11 +3,11 @@
 var totPoints = "";
 if (AInfo["Desired Scoping and Conditioning Questions 1"] == "CHECKED") {
   if (totPoints != "") totPoints += "& ";
-  totPoints = totPoints + "The current location of this water service is the same location that was previously approved by the Ci ";
+  totPoints = totPoints + "The current location of this water service is the same location that was previously approved by the City of Santa Barbara ";
 }
 if (AInfo["Desired Scoping and Conditioning Questions 2"] == "CHECKED") {
   if (totPoints != "") totPoints += "& ";
-  totPoints = totPoints + "The new water service will be installed in accordance with the manufacturer’s installation ";
+  totPoints = totPoints + "The new water service will be installed in accordance with the manufacturers installation ";
 }
 if (AInfo["Desired Scoping and Conditioning Questions 3"] == "CHECKED") {
   if (totPoints != "") totPoints += "& ";
