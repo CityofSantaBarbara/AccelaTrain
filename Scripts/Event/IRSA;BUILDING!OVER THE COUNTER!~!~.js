@@ -8,8 +8,8 @@ logDebug("start of IRSA;BUILDING!OVER THE COUNTER!~!~");
 var inspection = ('Building Final - Not Occupied','Final Electrical','Final Mechanical','Final Plumbing');
 if (inspType == inspection && inspResult == "Passed") {
 	logDebug("Criteria met at inspection type of " + inspType);
-	closeTask("Inspection","Final Inspection Passed","Auto Closed by Script","Auto Closed by Script");
-	closeTask("Close","Closed","Auto Closed by Script","Auto Closed by Script");
+	updateTask("Inspection","Final Inspection Complete","Auto Closed by Script","Auto Closed by Script");
+	//closeTask("Close","Closed","Auto Closed by Script","Auto Closed by Script");
 	updateAppStatus("Closed","Auto Closed by Script");
 	}
 
