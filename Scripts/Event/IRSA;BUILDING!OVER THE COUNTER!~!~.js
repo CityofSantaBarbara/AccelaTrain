@@ -11,7 +11,7 @@ if ((inspType == "Building Final - Not Occupied"
 	|| inspType == "Final Mechanical"
 	|| inspType == "Final Plumbing")
 	&& inspResult == "Passed") {
-	updateTask("Inspection","Final Inspection Complete","Auto Closed by Script","Auto Closed by Script");
+	closeTask("Inspection","Final Inspection Complete","Auto Closed by Script","Auto Closed by Script");
 	//closeTask("Close","Closed","Auto Closed by Script","Auto Closed by Script");
 	updateAppStatus("Closed","Auto Closed by Script");
 	}
