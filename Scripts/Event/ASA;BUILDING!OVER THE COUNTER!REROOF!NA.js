@@ -11,17 +11,17 @@ var bigRoof = parseInt(AInfo["Roof Square Footage"]) >= 3001;
 
 //Add the Fees from the one that is "CHECKED" and has a higher $ amount.
 if (
-  AInfo["Like for Like TearOff and Replace Composition Roofing"] == "CHECKED"
+  AInfo["Re-Roof Types"] == "Like for Like" || AInfo["Re-Roof Types"] == "Other"
 ) {
   feeToAdd.push("BLD_ITM_1090");
   if (bigRoof) feeToAdd.push("BLD_ITM_1100");
-} else if (AInfo["Like for Like Certified PVC Cool Roofing"] == "CHECKED") {
+} else if (AInfo["Re-Roof Types"] == "Certified PVC Cool Roof") {
   feeToAdd.push("BLD_ITM_1090");
   if (bigRoof) feeToAdd.push("BLD_ITM_1100");
-} else if (AInfo["Like for Like Remove and Re-Set Tile Roofing"] == "CHECKED") {
+} else if (AInfo["Re-Roof Types"] == "Remove & Reset Tile Over New Weather Barrier") {
   feeToAdd.push("BLD_ITM_1090");
   if (bigRoof) feeToAdd.push("BLD_ITM_1100");
-} else if (AInfo["Like for Like Composition Overlay Roofing"] == "CHECKED") {
+} else if (AInfo["Re-Roof Types"] == "Overlay Like for Like") {
   feeToAdd.push("BLD_ITM_1060");
   if (bigRoof) feeToAdd.push("BLD_ITM_1070");
 }
