@@ -62,32 +62,24 @@ updateFee("BLD_ITM_2040", "BLD LINE ITEMS FY2021", "FINAL", 1, "Y");
 //Set the Detail Description
 var totPoints = "";
 if (
-  AInfo[
-    "Like for Like TearOff and Replace Composition Roofing"
-  ] == "CHECKED"
+  AInfo["Re-Roof Types"] == "Like for Like"
   ) {
   if(totPoints != '') totPoints+= '& ';
   totPoints = totPoints + "Like for Like Tear-Off and Replace Composition Roofing ";
   } if (
-  AInfo[
-    "Like for Like Remove and Re-Set Tile Roofing"
-  ] == "CHECKED"
+    AInfo["Re-Roof Types"] == "Remove & Reset Tile Over New Weather Barrier"
   ) {
     if(totPoints != '') totPoints+= '& ';
   totPoints = totPoints + "Like for Like Remove & Re-Set Tile Roofing ";
   }
  if (
-  AInfo[
-    "Like for Like Composition Overlay Roofing"
-  ] == "CHECKED"
+  AInfo["Re-Roof Types"] == "Overlay Like for Like"
   ) {
     if(totPoints != '') totPoints+= '& ';
   totPoints = totPoints + "Like for Like Composition Overlay Roofing ";
   }
  if (
-  AInfo[
-    "Like for Like Certified PVC Cool Roofing"
-  ] == "CHECKED"
+  AInfo["Re-Roof Types"] == "Certified PVC Cool Roof"
   ) {
     if(totPoints != '') totPoints+= '& ';
   totPoints = totPoints + "Like-for-Like Color - Certified Cool Roof ";
