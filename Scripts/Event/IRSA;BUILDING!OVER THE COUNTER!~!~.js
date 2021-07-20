@@ -13,7 +13,7 @@ if ((inspType == "Building Final - Not Occupied"
 	&& inspResult == "Passed") {
 	closeTask("Inspection","Final Inspection Complete","Auto Closed by Script","Auto Closed by Script");
 	//closeTask("Close","Closed","Auto Closed by Script","Auto Closed by Script");
-	updateAppStatus("Closed","Auto Closed by Script");
+	updateAppStatus("Complete","Auto Closed by Script");
 	}
 	logDebug("Criteria met at inspection type of " + inspType);
 logDebug("end of IRSA;BUILDING!OVER THE COUNTER!~!~");
