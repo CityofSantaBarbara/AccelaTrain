@@ -16,6 +16,7 @@ for (var fIndex in feeItemArr) {
     thisFeeItem = String(feeItemArr[fIndex]);
     logDebug(thisFeeItem);
     //New A Occupancy Plan Check Fee
+    underSqFt = ("BLD_NRS_10","BLD_NRS_11","BLD_NRS_20");
     if (thisFeeItem == 'BLD_NRS_10') {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
         newQtyList = newQtyList + "";
