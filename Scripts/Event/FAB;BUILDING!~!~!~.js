@@ -15,8 +15,8 @@ feeItemArr = newList.split("|");
 for (var fIndex in feeItemArr) {
     thisFeeItem = String(feeItemArr[fIndex]);
     logDebug(thisFeeItem);
-    var underSqFt = ("BLD_NRS_10","BLD_NRS_11");
-    if (thisFeeItem == underSqFt) {
+    //New A Occupancy Plan Check Fee
+    if (thisFeeItem == 'BLD_NRS_10') {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
         newQtyList = newQtyList + "";
         feeQtyArray = newQtyList.split("|");
@@ -27,8 +27,14 @@ for (var fIndex in feeItemArr) {
             comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
             }
         }
-        var OverSqFt = ("BLD_NRS_010","BLD_NRS_011");
-    if (thisFeeItem == OverSqFt) {
+        if (thisFeeItem == 'BLD_NRS_10') {
+            if (parseFloat(feeQty) >= 1000) {
+                cancel = true;
+                showMessage= true;
+                comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
+                }
+            }
+    if (thisFeeItem == 'BLD_NRS_010') {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
         newQtyList = newQtyList + "";
         feeQtyArray = newQtyList.split("|");
