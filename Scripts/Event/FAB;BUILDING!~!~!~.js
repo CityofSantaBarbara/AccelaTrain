@@ -13,7 +13,7 @@ for (var fIndex in feeItemArr) {
         newQtyList = newQtyList + "";
         feeQtyArray = newQtyList.split("|");
         feeQty = feeQtyArray[fIndex];
-        if (parseFloat(feeQty) > 1000) {
+        if (parseFloat(feeQty) >= 1000) {
             logDebug("Second IF Statement");
             cancel = true;
             showMessage= true;
