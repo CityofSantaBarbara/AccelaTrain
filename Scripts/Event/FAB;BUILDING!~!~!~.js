@@ -28,6 +28,8 @@ for (var fIndex in feeItemArr) {
             }
         }
         if (thisFeeItem == 'BLD_NRS_10') {
+            feeQtyArray = newQtyList.split("|");
+            feeQty = feeQtyArray[fIndex];
             if (parseFloat(feeQty) >= 1000) {
                 cancel = true;
                 showMessage= true;
