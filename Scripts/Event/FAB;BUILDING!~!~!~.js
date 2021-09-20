@@ -27,21 +27,14 @@ for (var fIndex in feeItemArr) {
             comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
             }
         }
-        if (thisFeeItem == 'BLD_NRS_10') {
-            feeQtyArray = newQtyList.split("|");
-            feeQty = feeQtyArray[fIndex];
-            if (parseFloat(feeQty) >= 1000) {
-                cancel = true;
-                showMessage= true;
-                comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
-                }
-            }
     if (thisFeeItem == 'BLD_NRS_010') {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
         newQtyList = newQtyList + "";
         feeQtyArray = newQtyList.split("|");
         feeQty = feeQtyArray[fIndex];
+        logDebug("Before Second IF")
         if (parseFloat(feeQty) < 1000) {
+            logDebug("Here we are")
             cancel = true;
             showMessage= true;
             comment("You have selected a sq ft Under 1000 sq ft. Please use the fee that is (Under 1000 sq ft)");
