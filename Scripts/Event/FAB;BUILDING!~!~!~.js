@@ -16,6 +16,7 @@ for (var fIndex in feeItemArr) {
             cancel = true;
             showMessage= true;
             comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
+            message("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
             }
         }
     if (thisFeeItem == 'BLD_NRS_010') {
@@ -27,6 +28,7 @@ for (var fIndex in feeItemArr) {
             cancel = true;
             showMessage= true;
             comment("You have selected a sq ft Under 1000 sq ft. Please use the fee that is (Under 1000 sq ft)");
+            message("You have selected a sq ft Under 1000 sq ft. Please use the fee that is (Under 1000 sq ft)");
             }
         }
 }
