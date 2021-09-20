@@ -17,15 +17,3 @@ logDebug("start FAB:~/~/~/~ to add technology fee!");
 
 
 logDebug("end  FAB:~/~/~/~ to add technology fee!");
-
-for (var fiIndex in FeeItemsList) {
-    thisFeeItem = FeeItemsList[fiIndex];
-    if (thisFeeItem == 'BLD_NRS_10') {
-        feeQty = FeeItemsQuantityList[fiIndex];
-        if (parseFloat(feeQty) > 1000) {
-            cancel = true;
-            showMessage= true;
-            Comment("Not valid");
-        }
-    }
-}
