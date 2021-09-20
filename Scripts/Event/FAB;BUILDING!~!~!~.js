@@ -1,9 +1,10 @@
 logDebug("start FAB;BUILDING!~!~!~ to check correct fee!");
-
+logDebug("stat the under check");
 for (var fiIndex in FeeItemsList) {
     thisFeeItem = FeeItemsList[fiIndex];
     if (thisFeeItem == 'BLD_NRS_10') {
         feeQty = FeeItemsQuantityList[fiIndex];
+        logDebug(feeQty);
         if (parseFloat(feeQty) >= 1000) {
             cancel = true;
             showMessage= true;
