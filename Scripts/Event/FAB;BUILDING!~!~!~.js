@@ -1,24 +1,22 @@
-/*logDebug("start FAB;BUILDING!~!~!~ to check correct fee!");
+logDebug("start FAB;BUILDING!~!~!~ to check correct fee!");
 
-for (var fiIndex in FeeItemsList) {
-    thisFeeItem = FeeItemsList[fiIndex];
+logDebug("Start Fee Check");
+logDebug(String(FeeItemsList));
+
+for (var fIndex in FeeItemsList) {
+    thisFeeItem = String(FeeItemsList[fIndex]);
+    logDebug(thisFeeItem);
     if (thisFeeItem == 'BLD_NRS_10') {
+        logDebug("First IF Statement");
         feeQty = FeeItemsQuantityList[fiIndex];
         if (parseFloat(feeQty) >= 1000) {
+            logDebug("Second IF Statement");
             cancel = true;
             showMessage= true;
             comment("You have selected a sq ft over 1000 sq ft. Please use the fee that  is (Over 1000 sq ft)");
         }
     }
-    if (thisFeeItem == 'BLD_NRS_010') {
-        feeQty = FeeItemsQuantityList[fiIndex];
-        if (parseFloat(feeQty) < 1000) {
-            cancel = true;
-            showMessage= true;
-            comment("You have selected a sq ft under 1000 sq ft. Please use the fee that  is (Under 1000 sq ft)");
-        }
-    }
 }
 
 logDebug("end  FAB;BUILDING!~!~!~ to check correct fee!");
-*/
+
