@@ -8,6 +8,7 @@
 //				09-20-2021	Gray Quarter			Initial Draft
 //********************************************************************************************************
 logDebug("start FAB;BUILDING!~!~!~ to check correct fee!");
+/*
 //START - ZenDesk Ticket #1969 NRS Over/Under Fee Update
 newList = String(FeeItemsList).replace("[","").replace("]","");  
 newList = newList + "";
@@ -615,6 +616,7 @@ for (var fIndex in feeItemArr) {
             comment("You have selected a sq ft Under 1000 sq ft. Please use the fee that is (Under 1000 sq ft)");
             }
     }
+    */
 //New R3 Occupancy Plan Check Fee
     if (thisFeeItem == "BLD_NRS_129") {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
@@ -665,6 +667,7 @@ for (var fIndex in feeItemArr) {
             comment("You have selected a sq ft Under 1000 sq ft. Please use the fee that is (Under 1000 sq ft)");
             }
     }
+/*
 //TI A Occupancy Plan Check Fee
     if (thisFeeItem == "BLD_NRS_139") {
         newQtyList =  String(FeeItemsQuantityList).replace("[","").replace("]","");  
@@ -1166,6 +1169,7 @@ for (var fIndex in feeItemArr) {
             }
     }
 }
+*/
 //END - ZenDesk Ticket #1969 NRS Over/Under Fee Update
 logDebug("end  FAB;BUILDING!~!~!~ to check correct fee!");
 
