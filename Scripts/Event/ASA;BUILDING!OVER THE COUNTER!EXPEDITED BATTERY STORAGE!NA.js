@@ -6,7 +6,9 @@ removeAllFees(capId);
 
 updateFee("BLD_ITM_0030", "BLD LINE ITEMS", "FINAL", 1, "Y");
 
-
+if (AInfo['Encroch'] == 'CHECKED') {
+  updateFee("PDW2", "PBW_BLD_TRANS_REV", "FINAL", 1, "Y");
+}
 //Other fees that need to be added.
 //****************************************//
 //SMIP Category 1 - Smaller Residential - This fee is $13 per every $100,000 and calculated from the Addional Info "Job Value"

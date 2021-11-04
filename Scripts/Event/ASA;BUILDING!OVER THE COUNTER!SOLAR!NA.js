@@ -11,7 +11,7 @@ if (AInfo['Solar Photovoltaic and Battery Energy'] == 'CHECKED') {
 	updateFee("BLD_ITM_0230", "BLD LINE ITEMS", "FINAL", 1, "Y");
 }
 if (AInfo['Encroch'] == 'CHECKED') {
-  updateFee("PDW", "PBW_BLD_TRANS_REV", "FINAL", 1, "Y");
+  updateFee("PDW2", "PBW_BLD_TRANS_REV", "FINAL", 1, "Y");
 }
 
 //Other fees that need to be added.
