@@ -10,9 +10,10 @@
     var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
     var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
     var emailParameters = aa.util.newHashtable();
-    addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
-    addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
-    addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
+    emailParameters.put("$$Applicantemail$$", paEmail);
+    emailParameters.put("$$altID$$", capIDString);
+    emailParameters.put("$$recordAlias$$", cap.getCapType().getAlias());
+    emailParameters.put("$$acaRecordUrl$$", getACARecordURL(theURL));
     //generate report
     var user = "ADMIN"; // Setting the User Name
     var reportNames = new Array();
