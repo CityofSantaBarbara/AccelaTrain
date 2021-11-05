@@ -189,7 +189,7 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
-
+/*
 if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                logDebug("County Assessor email");
 	       //Get Report and Report Parameters
@@ -210,7 +210,7 @@ if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
-
+*/
 if (wfTask == "Inspection" && wfStatus == "Permit Expired") {
     logDebug("County Assessor email");
 //Get Report and Report Parameters
