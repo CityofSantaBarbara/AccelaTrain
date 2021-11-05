@@ -191,7 +191,7 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
 
-if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+if (!appMatch('Building/Over the Counter/*/*') && wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
     runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
   }
 /*
@@ -201,8 +201,8 @@ if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
               
 	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
                 var toEmail = "Jason@grayquarter.com";
-     var ccEmail = ""; //blank for now
-     //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+                var ccEmail = ""; //blank for now
+                //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
                 var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
                 var emailParameters = aa.util.newHashtable();
 		        addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
