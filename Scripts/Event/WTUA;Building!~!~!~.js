@@ -174,8 +174,9 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
 		//Get Report and Report Parameters
               
 	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-                var toEmail = "larry@grayquarter.com";
-                var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+            var toEmail = "Jason@grayquarter.com";
+            var ccEmail = ""; //blank for now
+            //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
                 var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
                 var emailParameters = aa.util.newHashtable();
 	        addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
@@ -189,14 +190,19 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
+
+if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+    runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
+  }
 /*
 if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                logDebug("County Assessor email");
 	       //Get Report and Report Parameters
               
 	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-                var toEmail = "larry@grayquarter.com";
-                var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+                var toEmail = "Jason@grayquarter.com";
+     var ccEmail = ""; //blank for now
+     //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
                 var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
                 var emailParameters = aa.util.newHashtable();
 		        addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
@@ -216,8 +222,9 @@ if (wfTask == "Inspection" && wfStatus == "Permit Expired") {
 //Get Report and Report Parameters
    
  var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-     var toEmail = "larry@grayquarter.com";
-     var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+     var toEmail = "Jason@grayquarter.com";
+     var ccEmail = ""; //blank for now
+     //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
      var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
      var emailParameters = aa.util.newHashtable();
      addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
