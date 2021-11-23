@@ -1,5 +1,6 @@
 
     var paEmail = "jason@grayquarter.com";
+    //var paEmail = "citypermits@co.santa-barbara.ca.us";
     if (paEmail != null && paEmail != undefined) {
     var reportFiles = new Array();
 
@@ -7,6 +8,7 @@
     var emailFrom = "SBCityLDT_TRAIN@santabarbaraca.gov";
     var emailTo = paEmail;
     var emailCC = "";
+    //var emailCC = "CDRecords@SantaBarbaraCA.gov";
     var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
     var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
     var emailParameters = aa.util.newHashtable();
