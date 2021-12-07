@@ -17,27 +17,85 @@ if ((inspType == "Building Final - Not Occupied"
 	//runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
 
 
-	logDebug("County Assessor email");
-	//Get Report and Report Parameters
-	  
-	var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-	var toEmail = "jason@grayquarter.com";
-	var ccEmail = "jason@grayquarter.com"; //blank for now
-	  //var toEmail = "citypermits@co.santa-barbara.ca.us";
-	  //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
-		var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
-		var emailParameters = aa.util.newHashtable();
-	addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
-		addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
-		addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
-	
-		var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
-		var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
-		var fileNames = [];
-	   
-		aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-		logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+	var paEmail = "jason@grayquarter.com";
+    //var paEmail = "citypermits@co.santa-barbara.ca.us";
+    if (paEmail != null && paEmail != undefined) {
+    var reportFiles = new Array();
+
+    aa.print("Email: " + paEmail);
+    var emailFrom = "SBCityLDT_TRAIN@santabarbaraca.gov";
+    var emailTo = paEmail;
+    var emailCC = "";
+    //var emailCC = "CDRecords@SantaBarbaraCA.gov";
+    var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
+    var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
+    var emailParameters = aa.util.newHashtable();
+    //emailParameters.put("$$Applicantemail$$", paEmail);
+    emailParameters.put("$$altID$$", capIDString);
+    //emailParameters.put("$$recordAlias$$", cap.getCapType().getAlias());
+    emailParameters.put("$$acaRecordUrl$$", getACARecordURL(theURL));
+    //generate report
+    var user = "ADMIN"; // Setting the User Name
+    var reportNames = new Array();
+    reportNames.push(["Inspection Summary"]);
+    
+    for (var i in reportNames) {
+        logDebug("running " + reportNames[i][0]);
+        var report = aa.reportManager.getReportInfoModelByName(
+        reportNames[i][0]
+        );
+        report = report.getOutput();
+        report.setModule("Building");
+        report.setCapId(capId);
+        var parameters = aa.util.newHashMap();
+        parameters.put("AGENCY_ALT_ID", capIDString);
+    
+        report.setReportParameters(parameters);
+        var permit = aa.reportManager.hasPermission(reportNames[i][0], user);
+        if (permit.getOutput().booleanValue()) {
+        var reportResult = aa.reportManager.getReportResult(report);
+        if (reportResult) {
+            var reportOutput = reportResult.getOutput();
+            if (reportOutput) {
+            var reportFile = aa.reportManager
+                .storeReportToDisk(reportOutput)
+                .getOutput();
+            reportFiles.push(reportFile);
+            }
+        }
+        }
+    }
+
+    if (reportFiles.length > 0) {
+        var capIDScriptModel = aa.cap.createCapIDScriptModel(
+        capId.getID1(),
+        capId.getID2(),
+        capId.getID3()
+        );
+        //Email report
+        var sendResult = aa.document.sendEmailAndSaveAsDocument(
+        emailFrom,
+        emailTo,
+        emailCC,
+        emailTemplate,
+        emailParameters,
+        capIDScriptModel,
+        reportFiles
+        );
+        //var sendResult = aa.document.sendEmailAndSaveAsDocument("ray.li2@hpe.com", "ray.li2@hpe.com", emailCC, "PERMIT_ISSUED_NOTICE", emailParameters, capIDScriptModel, null);
+
+        if (sendResult.getSuccess()) {
+        logDebug(
+            "SUCCESS, Building Module Report emailed with an pdf attachment"
+        );
+        } else {
+        logDebug("ERROR" + sendResult.getErrorMessage());
+        }
+    }
+    }
 
 }
 	logDebug("Criteria met at inspection type of " + inspType);
 logDebug("end of IRSA;BUILDING!OVER THE COUNTER!~!~");
+
+
