@@ -9,9 +9,9 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
 }
 
 //END - New On Demand Electrical Panel Upgrade record for ACA
-//if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
-//  runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
-//}
+if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+ runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
+}
 
 //START Santa Barbara Sharepoint #266
 if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
