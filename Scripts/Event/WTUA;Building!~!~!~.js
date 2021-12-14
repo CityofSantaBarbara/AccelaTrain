@@ -191,9 +191,9 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
 
-if (!appMatch('Building/Over the Counter/*/*') && wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
-    runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
-  }
+//if (!appMatch('Building/Over the Counter/*/*') && wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+ //   runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
+ // }
 /*
 if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                logDebug("County Assessor email");
