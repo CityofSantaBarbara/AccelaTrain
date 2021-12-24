@@ -12,7 +12,8 @@ if(docArray && docArray.length > 0) {
         var category = docModel.docCategory;
         var description = docModel.docDescription;
         if(!category || !description) {
-            errors.push(docName + " is missing a category and/or description.");
+            errors.push(docName + " is missing a category and/or description."); 
+            break
         }
     }
 }
