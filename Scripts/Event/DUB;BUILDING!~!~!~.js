@@ -3,7 +3,7 @@
 //Added by Gray Quarter
 //This script is to make sure there is a Document Group, Document Category, & Description
 logDebug("Starting DUB ");
-var docArray = recordDocArray;
+var docArray = getDocumentList();
 var errors = [];
 if(docArray && docArray.length > 0) {
     for(var z in docArray) {
