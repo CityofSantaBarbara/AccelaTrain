@@ -2,8 +2,8 @@
 //DUB:BUILDING/*/*/*
 //Added by Gray Quarter
 //This script is to make sure there is a Document Group, Document Category, & Description
-
-var docArray = documentModelArray.toArray();
+logDebug("Starting DUB ");
+var docArray = recordDocArray;
 var errors = [];
 if(docArray && docArray.length > 0) {
     for(var z in docArray) {
