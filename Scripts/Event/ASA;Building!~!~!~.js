@@ -4,6 +4,7 @@ addRefContactToRecord(152,"Contact");
 addRefContactToRecord(174,"Business Owner"); // added for zen 1106
 }
 
+editAppSpecific("Plan Review Distribution Count","0");
 /*
 // Added by Gray Quarter for zen #493
 if (publicUser) {  
