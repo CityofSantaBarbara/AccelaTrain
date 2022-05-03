@@ -22,8 +22,13 @@ function createConditionForPlanReview()
 	/* handle the counter */
 	if (wfTask == "Plans Distribution" && wfStatus == "Routed for Review") {
 		logDebug("Matched on Plans Distribution & Routed for Review");
-		var prdCount = parseInt(getAppSpecific("Plan Review Distribution Count"));
-		editAppSpecific("Plan Review Distribution Count", prdCount + 1);
+		currentReviewCount = getAppSpecific("Plan Review Distribution Count");
+		if(!currentReviewCount) {
+			currentReviewCount = 0;
+		} else {
+			currentReviewCount = parseInt(currentReviewCount, 10);
+		}
+		editAppSpecific("Plan Review Distribution Count", (currentReviewCount + 1));
 	}
 	
 	/* create the associated plan review */
