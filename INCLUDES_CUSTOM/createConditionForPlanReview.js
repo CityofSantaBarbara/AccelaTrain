@@ -34,14 +34,16 @@ function createConditionForPlanReview()
 	/* create the associated plan review */
 	var conditionDesc = lookup("BLD_WFTASK_CONDITION_MAP",wfTask);
 	if (conditionDesc != -1 && wfStatus == "Routed to Reviewer") {
-
 		var prdCount = getAppSpecific("Plan Review Distribution Count");	
 		var title = "Review " + prdCount + ": " + conditionDesc;
 		var newStatus = "Routed to Reviewer " + prdCount;
-		logDebug("Matched on " + conditionDesc + " & Routed & title =" + title + " & prdCount = " + prdCount);
-		addAppCondition("Plan Review","Pending",title,"01025","Notice");
-		updateTask(wfTask,newStatus,"comment","note");
+		capHasCond = appHasCondition("Plan Review", "Pending", title, null);
+		if(!capHasCond) {
+			logDebug("Matched on " + conditionDesc + " & Routed & title =" + title + " & prdCount = " + prdCount);
+			addAppCondition("Plan Review","Pending",title,"01025","Notice");
 		}
+		updateTask(wfTask,newStatus,"comment","note");
+	}
 	
 	logDebug("END of createConditionForPlanReview");
 }
