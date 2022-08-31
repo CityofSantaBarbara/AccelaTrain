@@ -281,10 +281,11 @@ if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
         }
 
      addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
-     addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
+     var someaddress = getAddressInALineLocal(capId);
+     addParameter(emailParameters, "$$addressLine$$", someaddress);
      addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
 
-     var emailTemplate = "BLD_PERMIT_EXPIRED_APP_ASSESSOR";
+     var emailTemplate = "BLD External Plan Reviewer Notification";
      var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
      var fileNames = [];
     
