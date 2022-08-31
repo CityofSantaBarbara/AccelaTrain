@@ -261,10 +261,14 @@ if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
                 if (conType == "Applicant") {
                     thisConFirstName = thisContact.firstName;
                     thisConLastName = thisContact.lastName;
-                    if (thisConLastName == "Nounvilaythong" && thisConFirstName == "Anita")
+                    if (thisConLastName == "Jackson" && thisConFirstName == "Jason")
                         anitaFound = true;
-                    if (thisConLastName == "Heivand" && thisConFirstName == "Moe")
+                    if (thisConLastName == "Quarter" && thisConFirstName == "Gray")
                         moeFound = true;
+                    // if (thisConLastName == "Nounvilaythong" && thisConFirstName == "Anita")
+                    //     anitaFound = true;
+                    // if (thisConLastName == "Heivand" && thisConFirstName == "Moe")
+                    //     moeFound = true;
                     thisConEmail = thisContact.email;
                     if (moeFound || anitaFound) break;
                 }
