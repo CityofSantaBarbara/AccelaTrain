@@ -239,6 +239,57 @@ if (wfTask == "Inspection" && wfStatus == "Permit Expired") {
      logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
 
+//GQ Ticket 3545
+if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
+    logDebug("BLD External Plan Reviewer Notification");
+//Get Report and Report Parameters
+   
+ var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+     var toEmail = "";
+     var ccEmail = ""; //blank for now
+     var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
+     var emailParameters = aa.util.newHashtable();
+        moeFound = false;
+        anitaFound = false;
+        thisConEmail = "";
+        thisConFirstName = "";
+        conArray = getContactArray();
+        if (conArray && conArray.length > 0) {
+            for (var i=0; i<conArray.length;i++) {
+                thisContact = conArray[i];
+                conType = thisContact.contactType;
+                if (conType == "Applicant") {
+                    thisConFirstName = thisContact.firstName;
+                    thisConLastName = thisContact.lastName;
+                    if (thisConLastName == "Nounvilaythong" && thisConFirstName == "Anita")
+                        anitaFound = true;
+                    if (thisConLastName == "Heivand" && thisConFirstName == "Moe")
+                        moeFound = true;
+                    thisConEmail = thisContact.email;
+                    if (moeFound || anitaFound) break;
+                }
+            }
+        }
+        if (moeFound || anitaFound) {
+            toEmail = thisConEmail;
+            // sub into email token if you want the name in the text of the email...
+            addParameter(emailParameters, "$$HelloName$$", thisConFirstName);
+        }
+
+     addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
+     addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
+     addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
+
+     var emailTemplate = "BLD_PERMIT_EXPIRED_APP_ASSESSOR";
+     var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
+     var fileNames = [];
+    
+     aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
+     logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+}
+
+
+//FUNCTION SECTION
 function generateReportForASyncEmail(itemCap, reportName, module, parameters) {
     //returns the report file which can be attached to an email.
     var vAltId;
