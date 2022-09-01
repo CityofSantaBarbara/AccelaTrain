@@ -251,6 +251,7 @@ if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
      var emailParameters = aa.util.newHashtable();
         moeFound = false;
         anitaFound = false;
+        samFound = false;
         thisConEmail = "";
         thisConFirstName = "";
         conArray = getContactArray();
@@ -261,20 +262,24 @@ if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
                 if (conType == "Applicant") {
                     thisConFirstName = thisContact.firstName;
                     thisConLastName = thisContact.lastName;
-                    if (thisConLastName == "Jackson" && thisConFirstName == "Jason")
+                    if (thisConLastName == "Folman" && thisConFirstName == "Nicole")
                         anitaFound = true;
-                    if (thisConLastName == "Quarter" && thisConFirstName == "Gray")
+                    if (thisConLastName == "rutledge" && thisConFirstName == "raven")
                         moeFound = true;
+                    if (thisConLastName == "Jackson" && thisConFirstName == "Jason")
+                        samFound = true;
                     // if (thisConLastName == "Nounvilaythong" && thisConFirstName == "Anita")
                     //     anitaFound = true;
                     // if (thisConLastName == "Heivand" && thisConFirstName == "Moe")
                     //     moeFound = true;
+                    // if (thisConLastName == "Phillips" && thisConFirstName == "Sam")
+                    //     samFound = true;
                     thisConEmail = thisContact.email;
-                    if (moeFound || anitaFound) break;
+                    if (moeFound || anitaFound || samFound) break;
                 }
             }
         }
-        if (moeFound || anitaFound) {
+        if (moeFound || anitaFound || samFound) {
             toEmail = thisConEmail;
             // sub into email token if you want the name in the text of the email...
             addParameter(emailParameters, "$$HelloName$$", thisConFirstName);
