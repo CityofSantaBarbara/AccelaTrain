@@ -289,7 +289,8 @@ if (wfTask == "B-Structural" && wfStatus == "Routed to Reviewer") {
      var someaddress = getAddressInALineLocal(capId);
      addParameter(emailParameters, "$$addressLine$$", someaddress);
      addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
-     var count = (AInfo["Plan Review Distribution Count"]);
+     //var count = AInfo["Plan Review Distribution Count"](capId);
+     var count = getAppSpecific("Plan Review Distribution Count");
      addParameter(emailParameters, "$$submittalCount$$", count);
 
      var emailTemplate = "BLD External Plan Reviewer Notification";
