@@ -151,6 +151,8 @@ eval(getScriptText("INCLUDES_CRM", null, false));
                 addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
 				addParameter(emailParameters, "$$Submittal$$", AInfo["Plan Review Distribution Count"]);
 				addParameter(emailParameters, "$$submittalCount$$", count);
+                var someaddress = getAddressInALineLocal(capId);
+                addParameter(emailParameters, "$$addressLine$$", someaddress);
 				logDebug("in the Email parameters if statement" + emailParameters);
                 var emailTemplate = "BLD PLAN CHECK CORRECTIONS";
                 var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
